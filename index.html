@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>School House Childcare | Licensed Premier Daycare Coquitlam</title>
+    <title>School House Childcare | Coquitlam</title>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -23,10 +23,9 @@
             scroll-behavior: smooth;
         }
 
-        /* Navigation */
         header {
             background: #fff;
-            padding: 15px 5%;
+            padding: 10px 5%;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -36,12 +35,15 @@
             z-index: 1000;
         }
 
-        .logo {
-            font-family: 'Quicksand', sans-serif;
-            font-weight: 700;
-            font-size: 1.6rem;
-            color: var(--primary-blue);
-            text-decoration: none;
+        .header-logo {
+            height: 60px; /* Adjust size as needed */
+            display: flex;
+            align-items: center;
+        }
+
+        .header-logo img {
+            height: 100%;
+            width: auto;
         }
 
         nav a {
@@ -54,61 +56,60 @@
 
         nav a:hover { color: var(--warm-orange); }
 
-        /* Hero Section */
         .hero {
             background: linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)), 
                         url('https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?auto=format&fit=crop&w=1350&q=80');
             background-size: cover;
             text-align: center;
-            padding: 100px 10%;
+            padding: 80px 10%;
         }
 
-        .hero h1 { font-family: 'Quicksand'; font-size: 3.5rem; color: var(--primary-blue); margin: 0; }
-        .hero p { font-size: 1.2rem; margin-top: 15px; }
+        .hero-img {
+            max-width: 180px;
+            margin-bottom: 20px;
+        }
 
-        /* General Styling */
+        .hero h1 { font-family: 'Quicksand'; font-size: 3.2rem; color: var(--primary-blue); margin: 0; line-height: 1.2; }
+        .hero p { font-size: 1.2rem; margin-top: 15px; color: #555; }
+
         section { padding: 80px 10%; border-bottom: 1px solid #eee; }
-        h2 { font-family: 'Quicksand'; font-size: 2.5rem; text-align: center; color: var(--primary-blue); margin-bottom: 40px; }
+        h2 { font-family: 'Quicksand'; font-size: 2.2rem; text-align: center; color: var(--primary-blue); margin-bottom: 40px; }
+        
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-        .card { background: #fff; padding: 35px; border-radius: 25px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
-        .card h3 { color: var(--soft-green); font-family: 'Quicksand'; margin-top: 0; }
+        .card { background: #fff; padding: 35px; border-radius: 25px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border-bottom: 4px solid var(--soft-green); }
+        .card h3 { color: var(--primary-blue); font-family: 'Quicksand'; margin-top: 0; }
 
-        /* Care Plan & Guidance Lists */
         .feature-list { list-style: none; padding: 0; }
         .feature-list li { margin-bottom: 15px; padding-left: 30px; position: relative; }
         .feature-list li::before { content: '✓'; position: absolute; left: 0; color: var(--soft-green); font-weight: bold; }
 
-        /* Schedule Section */
         .schedule-box { background: var(--primary-blue); color: white; padding: 40px; border-radius: 30px; max-width: 800px; margin: 0 auto; }
         .schedule-item { display: flex; justify-content: space-between; border-bottom: 1px solid rgba(255,255,255,0.2); padding: 12px 0; }
 
-        /* Safety/Health Section */
         .safety-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
         .safety-card { background: #f0f7ff; padding: 25px; border-radius: 20px; border-left: 5px solid var(--warm-orange); }
 
-        /* Contact Section */
         .contact-flex { display: flex; gap: 50px; flex-wrap: wrap; }
         .contact-info { flex: 1; min-width: 300px; }
-        .contact-form { flex: 1.5; min-width: 300px; background: white; padding: 40px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
-
-        input, textarea { width: 100%; padding: 15px; margin: 10px 0 20px 0; border: 1px solid #ddd; border-radius: 10px; }
-        button { background: var(--warm-orange); color: white; border: none; padding: 18px 40px; border-radius: 35px; font-weight: 700; cursor: pointer; width: 100%; font-size: 1.1rem; }
+        .form-container { flex: 1.5; min-width: 300px; background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
 
         footer { background: #2D3436; color: white; text-align: center; padding: 40px; }
 
         @media (max-width: 768px) {
-            .hero h1 { font-size: 2.5rem; }
+            .hero h1 { font-size: 2.2rem; }
             nav { display: none; }
+            .form-container { min-height: 750px; }
         }
     </style>
 </head>
 <body>
 
 <header>
-    <a href="#" class="logo">🏠 School House Childcare</a>
+    <a href="#" class="header-logo">
+        <img src="https://raw.githubusercontent.com/schoolhousechildcare/root/102d0757a520bf57d63d641a53a8d739fc3f777e/Logo%20School%20House.png" alt="School House Childcare Logo">
+    </a>
     <nav>
         <a href="#about">Our Space</a>
-        <a href="#care">Care Plan</a>
         <a href="#guidance">Guidance</a>
         <a href="#safety">Safety</a>
         <a href="#schedule">Schedule</a>
@@ -117,58 +118,32 @@
 </header>
 
 <section class="hero">
-    <h1>Premier Licensed In-Home Childcare</h1>
-    <p>Located at 1506 Austin Ave, Coquitlam. Owned by Kubo Holdings Inc.</p>
-    <a href="#contact" style="text-decoration:none;"><button style="width:auto; margin-top:20px;">Book a Private Tour</button></a>
+    <img src="https://raw.githubusercontent.com/schoolhousechildcare/root/102d0757a520bf57d63d641a53a8d739fc3f777e/Logo%20School%20House.png" alt="School House Logo" class="hero-img">
+    <h1>Nurturing Curiosity,<br>One Playful Day at a Time.</h1>
+    <p>Licensed In-Home Childcare at 1506 Austin Ave, Coquitlam.</p>
+    <a href="#contact" style="text-decoration:none;"><button style="background:var(--warm-orange); color:white; border:none; padding:18px 35px; border-radius:35px; font-weight:700; cursor:pointer; font-size: 1.1rem; margin-top: 20px;">Inquire for Enrollment</button></a>
 </section>
 
-<!-- Section 1: Physical Space -->
+<!-- Space -->
 <section id="about">
-    <h2>Spacious & Secure Environment</h2>
+    <h2>Our Learning Environment</h2>
     <div class="grid">
         <div class="card">
             <h3>Indoor Play Studio</h3>
-            <p>Our dedicated <strong>375 sq. ft.</strong> indoor recreation room is custom-designed for small-group discovery, creative arts, and cozy reading corners.</p>
+            <p>Our dedicated <strong>375 sq. ft.</strong> space is designed for messy play, storytelling, and early cognitive discovery.</p>
         </div>
         <div class="card">
             <h3>Secure Outdoor Space</h3>
-            <p>We feature a fully fenced, safe <strong>600 sq. ft.</strong> backyard area for daily fresh air, gardening, and gross motor exploration.</p>
+            <p>A fully fenced <strong>600 sq. ft.</strong> backyard area allows for daily fresh air and nature exploration.</p>
         </div>
     </div>
 </section>
 
-<!-- Section 2: Detailed Care Plan -->
-<section id="care" style="background: #fff;">
-    <h2>Our Holistic Care Plan</h2>
-    <div class="grid">
-        <div class="card">
-            <h3>The Whole-Child Approach</h3>
-            <p>We focus on physical, social, and cognitive development through balanced, age-appropriate activities.</p>
-            <ul class="feature-list">
-                <li><strong>Cognitive discovery:</strong> Literacy and STEM play.</li>
-                <li><strong>Social milestones:</strong> Collaborative group play.</li>
-                <li><strong>Physical health:</strong> Daily movement exercises.</li>
-                <li><strong>Nutrition:</strong> Following Canada’s Food Guide.</li>
-            </ul>
-        </div>
-        <div class="card">
-            <h3>Why Choose Us?</h3>
-            <p>We combine the warmth of a home with the professional standards of a premier learning center.</p>
-            <ul class="feature-list">
-                <li>Maximum 8-child capacity for personalized attention.</li>
-                <li>Licensed & inspected by Fraser Health.</li>
-                <li>Warm, nurturing home-based atmosphere.</li>
-                <li>Experienced professional supervision.</li>
-            </ul>
-        </div>
-    </div>
-</section>
-
-<!-- Section 3: Guidance & Discipline Policy -->
+<!-- Guidance -->
 <section id="guidance" style="background: #f9fbfd;">
-    <h2>Guidance & Growth Policy</h2>
-    <div class="card" style="max-width: 800px; margin: 0 auto; border-top: 5px solid var(--soft-green);">
-        <p>We view behavior as communication. Our policy focuses on positive guidance to help children develop emotional intelligence and self-control.</p>
+    <h2>Guidance & Growth</h2>
+    <div class="card" style="max-width: 800px; margin: 0 auto;">
+        <p>Our small-group setting (max 8 children) allows for personalized emotional support and co-regulation.</p>
         <ul class="feature-list" style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
             <li>Positive Redirection</li>
             <li>Emotional Co-Regulation</li>
@@ -176,72 +151,67 @@
             <li>Safe & Clear Boundaries</li>
         </ul>
         <p style="font-size: 0.85rem; font-style: italic; color: #666; margin-top: 20px; border-top: 1px solid #eee; padding-top: 15px;">
-            *Our guidance protocols strictly adhere to the BC Child Care Licensing Regulation regarding prohibited practices.
+            *Strictly adhering to BC Child Care Licensing Regulations.
         </p>
     </div>
 </section>
 
-<!-- Section 4: Safety & Health Protocols -->
+<!-- Safety -->
 <section id="safety">
-    <h2>Safety & Health Standards</h2>
+    <h2>A Safe Space to Grow</h2>
     <div class="safety-grid">
         <div class="safety-card">
-            <h3>Scent-Free Zone</h3>
-            <p>We use only eco-friendly, fragrance-free cleaners to support children with respiratory sensitivities.</p>
+            <h3>Scent-Free Facility</h3>
+            <p>Using fragrance-free, eco-friendly cleaners for healthy breathing space.</p>
         </div>
         <div class="safety-card">
-            <h3>Allergy-Aware Facility</h3>
-            <p>We are a 100% nut-free facility with rigorous protocols to manage individual food sensitivities.</p>
+            <h3>Allergy Aware</h3>
+            <p>100% nut-free environment with strict cross-contamination protocols.</p>
         </div>
         <div class="safety-card">
-            <h3>Safe Drop-off Zone</h3>
-            <p>Our designated, low-traffic transition area ensures arrivals and departures are safe and stress-free.</p>
+            <h3>Safe Drop-off</h3>
+            <p>Designated transition area at 1506 Austin Ave for secure arrivals.</p>
         </div>
         <div class="safety-card">
-            <h3>Wellness Checks</h3>
-            <p>To keep our small group healthy, we perform daily wellness screenings and follow strict illness protocols.</p>
+            <h3>Daily Wellness</h3>
+            <p>Consistent health screenings to keep our small community thriving.</p>
         </div>
     </div>
 </section>
 
-<!-- Section 5: Daily Schedule -->
+<!-- Schedule -->
 <section id="schedule" style="background: #f0f7ff;">
-    <h2>Our Daily Routine</h2>
+    <h2>The Daily Rhythm</h2>
     <div class="schedule-box">
-        <div class="schedule-item"><span>8:00 AM - 9:00 AM</span> <span>Arrival & Discovery Play</span></div>
-        <div class="schedule-item"><span>9:30 AM - 10:30 AM</span> <span>Morning Snack & Circle Time</span></div>
-        <div class="schedule-item"><span>10:30 AM - 12:00 PM</span> <span>Outdoor Exploration </span></div>
-        <div class="schedule-item"><span>12:00 PM - 1:00 PM</span> <span>Nutritious Lunch Time</span></div>
-        <div class="schedule-item"><span>1:00 PM - 3:00 PM</span> <span>Rest & Reflection Period (Nap)</span></div>
-        <div class="schedule-item"><span>3:00 PM - 4:30 PM</span> <span>Indoor Studio Recreation & Arts</span></div>
+        <div class="schedule-item"><span>8:00 AM</span> <span>Arrival & Quiet Discovery</span></div>
+        <div class="schedule-item"><span>10:30 AM</span> <span>Outdoor Exploration & Play</span></div>
+        <div class="schedule-item"><span>12:00 PM</span> <span>Nutritious Lunch Time</span></div>
+        <div class="schedule-item"><span>1:00 PM</span> <span>Nap & Rest Period</span></div>
         <div class="schedule-item"><span>5:00 PM</span> <span>Departure</span></div>
     </div>
 </section>
 
-<!-- Section 6: Contact -->
+<!-- Contact -->
 <section id="contact">
     <div class="contact-flex">
         <div class="contact-info">
-            <h2>Join Our Community</h2>
-            <p><strong>Location:</strong> 1506 Austin Ave, Coquitlam, BC V3K 3P7</p>
-            <p><strong>Email:</strong> <a href="mailto:schoolhousechildcare@outlook.com" style="color: var(--primary-blue); font-weight: bold; text-decoration: none;">schoolhousechildcare@outlook.com</a></p>
-            <p style="margin-top:20px;">We currently have a limited number of spaces for our upcoming term. Please submit an inquiry to join our waitlist.</p>
+            <h2>Let's Connect</h2>
+            <p>Ready to see our space? Fill out our form or email us to join our waitlist.</p>
+            <p><strong>Address:</strong> 1506 Austin Ave, Coquitlam, BC V3K 3P7</p>
+            <p><strong>Email:</strong> <a href="mailto:schoolhousechildcare@outlook.com">schoolhousechildcare@outlook.com</a></p>
+            <p style="margin-top:20px; font-size: 0.9rem;">Licensed by Fraser Health. Owned by Kubo Holdings Inc.</p>
         </div>
-        <div class="contact-form">
-            <form action="https://formspree.io/f/your-id-here" method="POST">
-                <input type="text" name="name" placeholder="Parent Name" required>
-                <input type="email" name="email" placeholder="Email Address" required>
-                <input type="text" name="child_age" placeholder="Child's Age">
-                <textarea name="message" rows="5" placeholder="Tell us about your childcare needs..."></textarea>
-                <button type="submit">Submit Inquiry</button>
-            </form>
+        
+        <div class="form-container">
+            <iframe width="100%" height="750px" src="https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAN__7Ez7NlURDkwWllXV0IwU05QN1ZFT1Q4N1RQTjhMTy4u&embed=true" frameborder="0" marginheight="0" marginwidth="0" style="border: none; max-width:100%;" allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen> </iframe>
         </div>
     </div>
 </section>
 
 <footer>
-    <p><strong>School House Childcare</strong><br>1506 Austin Ave, Coquitlam, BC V3K 3P7</p>
-    <p style="opacity: 0.5; font-size: 0.8rem; margin-top: 15px;">&copy; 2026 Licensed In-Home Childcare. All Rights Reserved.</p>
+    <img src="https://raw.githubusercontent.com/schoolhousechildcare/root/102d0757a520bf57d63d641a53a8d739fc3f777e/Logo%20School%20House.png" alt="School House Logo" style="height:50px; margin-bottom:10px;">
+    <p><strong>School House Childcare</strong> | Coquitlam, BC</p>
+    <p style="opacity: 0.5; font-size: 0.8rem;">&copy; 2026 All Rights Reserved.</p>
 </footer>
 
 </body>
