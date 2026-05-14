@@ -6,17 +6,18 @@
     <title>School House Childcare | Coquitlam</title>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
-        /* This "magically" removes white backgrounds from images on your site */
-.header-logo img, .hero-img {
-    mix-blend-mode: multiply;
-    filter: contrast(120%);
-}
         :root {
             --primary-blue: #2A5C9A;
             --soft-green: #5BB318;
             --warm-orange: #F99417;
             --bg-light: #FDFDFD;
             --text-main: #2D3436;
+        }
+
+        /* Image transparency & quality fix */
+        .header-logo img, .hero-img {
+            mix-blend-mode: multiply;
+            filter: contrast(120%);
         }
 
         body {
@@ -40,15 +41,21 @@
             z-index: 1000;
         }
 
-        .header-logo {
-            height: 60px; /* Adjust size as needed */
+        .header-left {
             display: flex;
             align-items: center;
+            gap: 15px;
         }
 
-        .header-logo img {
-            height: 100%;
-            width: auto;
+        .header-logo { height: 60px; display: flex; align-items: center; }
+        .header-logo img { height: 100%; width: auto; }
+
+        .brand-text {
+            font-family: 'Quicksand', sans-serif;
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: var(--primary-blue);
+            line-height: 1;
         }
 
         nav a {
@@ -66,16 +73,11 @@
                         url('https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?auto=format&fit=crop&w=1350&q=80');
             background-size: cover;
             background-position: center;
-            padding: 100px 5%;
             text-align: center;
-            padding: 80px 10%;
+            padding: 100px 10%;
         }
 
-        .hero-img {
-            max-width: 180px;
-            margin-bottom: 20px;
-        }
-
+        .hero-img { max-width: 180px; margin-bottom: 20px; }
         .hero h1 { font-family: 'Quicksand'; font-size: 3.2rem; color: var(--primary-blue); margin: 0; line-height: 1.2; }
         .hero p { font-size: 1.2rem; margin-top: 15px; color: #555; }
 
@@ -98,23 +100,41 @@
 
         .contact-flex { display: flex; gap: 50px; flex-wrap: wrap; }
         .contact-info { flex: 1; min-width: 300px; }
-        .form-container { flex: 1.5; min-width: 300px; background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+
+        /* Form styling with footer-hide trick */
+        .form-container { 
+            flex: 1.5; 
+            min-width: 300px; 
+            background: white; 
+            border-radius: 20px; 
+            overflow: hidden; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1); 
+            height: 620px; /* Cropped to hide MS footer */
+            position: relative;
+        }
 
         footer { background: #2D3436; color: white; text-align: center; padding: 40px; }
 
         @media (max-width: 768px) {
             .hero h1 { font-size: 2.2rem; }
-            nav { display: none; }
-            .form-container { min-height: 750px; }
+            .brand-text, nav { display: none; }
+            .form-container { height: 600px; }
+        }
+
+        @media (min-width: 769px) {
+            .mobile-only-fix { display: none; }
         }
     </style>
 </head>
 <body>
 
 <header>
-    <a href="#" class="header-logo">
-        <img src="https://raw.githubusercontent.com/schoolhousechildcare/root/102d0757a520bf57d63d641a53a8d739fc3f777e/Logo%20School%20House.png" alt="School House Childcare Logo">
-    </a>
+    <div class="header-left">
+        <a href="#" class="header-logo">
+            <img src="https://raw.githubusercontent.com/schoolhousechildcare/root/102d0757a520bf57d63d641a53a8d739fc3f777e/Logo%20School%20House.png" alt="School House Childcare Logo">
+        </a>
+        <div class="brand-text">School House<br><span style="font-size: 0.8rem; color: var(--soft-green);">Childcare</span></div>
+    </div>
     <nav>
         <a href="#about">Our Space</a>
         <a href="#guidance">Guidance</a>
@@ -131,7 +151,6 @@
     <a href="#contact" style="text-decoration:none;"><button style="background:var(--warm-orange); color:white; border:none; padding:18px 35px; border-radius:35px; font-weight:700; cursor:pointer; font-size: 1.1rem; margin-top: 20px;">Inquire for Enrollment</button></a>
 </section>
 
-<!-- Space -->
 <section id="about">
     <h2>Our Learning Environment</h2>
     <div class="grid">
@@ -146,7 +165,6 @@
     </div>
 </section>
 
-<!-- Guidance -->
 <section id="guidance" style="background: #f9fbfd;">
     <h2>Guidance & Growth</h2>
     <div class="card" style="max-width: 800px; margin: 0 auto;">
@@ -163,30 +181,16 @@
     </div>
 </section>
 
-<!-- Safety -->
 <section id="safety">
     <h2>A Safe Space to Grow</h2>
     <div class="safety-grid">
-        <div class="safety-card">
-            <h3>Scent-Free Facility</h3>
-            <p>Using fragrance-free, eco-friendly cleaners for healthy breathing space.</p>
-        </div>
-        <div class="safety-card">
-            <h3>Allergy Aware</h3>
-            <p>100% nut-free environment with strict cross-contamination protocols.</p>
-        </div>
-        <div class="safety-card">
-            <h3>Safe Drop-off</h3>
-            <p>Designated transition area at 1506 Austin Ave for secure arrivals.</p>
-        </div>
-        <div class="safety-card">
-            <h3>Daily Wellness</h3>
-            <p>Consistent health screenings to keep our small community thriving.</p>
-        </div>
+        <div class="safety-card"><h3>Scent-Free Facility</h3><p>Using fragrance-free, eco-friendly cleaners.</p></div>
+        <div class="safety-card"><h3>Allergy Aware</h3><p>100% nut-free environment.</p></div>
+        <div class="safety-card"><h3>Safe Drop-off</h3><p>Designated area at 1506 Austin Ave.</p></div>
+        <div class="safety-card"><h3>Daily Wellness</h3><p>Consistent health screenings.</p></div>
     </div>
 </section>
 
-<!-- Schedule -->
 <section id="schedule" style="background: #f0f7ff;">
     <h2>The Daily Rhythm</h2>
     <div class="schedule-box">
@@ -198,8 +202,6 @@
     </div>
 </section>
 
-<!-- Contact -->
-<!-- THE FIXED CONTACT SECTION -->
 <section id="contact">
     <div class="contact-flex">
         <div class="contact-info">
@@ -216,14 +218,7 @@
             </div>
         </div>
         
-        <!-- THE TRICK: We set a specific height and 'overflow: hidden' to mask the MS footer -->
-        <div class="form-container" style="
-            height: 620px; 
-            overflow: hidden; 
-            border: 1px solid #eee; 
-            background: #fff;
-            position: relative;
-        ">
+        <div class="form-container">
             <iframe 
                 width="100%" 
                 height="800px" 
@@ -236,54 +231,8 @@
     </div>
 </section>
 
-<style>
-    /* Desktop vs Mobile adjustments for the 'mask' */
-    @media (max-width: 768px) {
-        .form-container { height: 600px; } /* Tightens the box on mobile to hide the footer */
-    }
-    @media (min-width: 769px) {
-        .mobile-only-fix { display: none; }
-    }
-</style><style>
-    /* This makes sure the button is very obvious on phones but subtle on computers */
-    @media (min-width: 769px) {
-        .mobile-only-fix { display: none; }
-    }
-</style>
-        
-        <!-- Right Side: The Fixed MS Form Container -->
-        <div class="form-container" style="
-            flex: 1.5; 
-            min-width: 300px; 
-            background: white; 
-            border-radius: 20px; 
-            overflow: hidden; 
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            /* FIX #1: This forces space for the form to load on mobile, preventing collapse */
-            min-height: 700px;
-        ">
-            <!-- The updated iframe link -->
-            <iframe 
-                width="100%" 
-                height="700px" 
-                /* FIX #2: Ensures '&embed=true' is present, which strips away the bulky MS header for mobile view */
-                src="https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAN__7Ez7NlURDkwWllXV0IwU05QN1ZFT1Q4N1RQTjhMTy4u&embed=true" 
-                frameborder="0" 
-                marginheight="0" 
-                marginwidth="0" 
-                style="border: none; width: 100%; height: 700px; display: block;" 
-                allowfullscreen 
-                webkitallowfullscreen 
-                mozallowfullscreen 
-                msallowfullscreen>
-                Loading…
-            </iframe>
-        </div>
-    </div>
-</section>
-
 <footer>
-    <img src="https://raw.githubusercontent.com/schoolhousechildcare/root/102d0757a520bf57d63d641a53a8d739fc3f777e/Logo%20School%20House.png" alt="School House Logo" style="height:50px; margin-bottom:10px;">
+    <img src="https://raw.githubusercontent.com/schoolhousechildcare/root/102d0757a520bf57d63d641a53a8d739fc3f777e/Logo%20School%20House.png" alt="School House Logo" style="height:50px; margin-bottom:10px; mix-blend-mode: multiply;">
     <p><strong>School House Childcare</strong> | Coquitlam, BC</p>
     <p style="opacity: 0.5; font-size: 0.8rem;">&copy; 2026 All Rights Reserved.</p>
 </footer>
