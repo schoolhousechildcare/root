@@ -201,16 +201,36 @@
 <!-- Contact -->
 <!-- THE FIXED CONTACT SECTION -->
 <section id="contact">
-    <div class="contact-flex" style="display: flex; gap: 40px; flex-wrap: wrap;">
-        
-        <!-- Left Side: Text Info -->
-        <div class="contact-info" style="flex: 1; min-width: 300px;">
-            <h2 style="font-family: 'Quicksand'; color: var(--primary-blue); text-align: left;">Let's Connect</h2>
-            <p>Ready to see our space? Fill out our inquiry form or send us an email to join our waitlist.</p>
-            <p><strong>Address:</strong> 1506 Austin Ave, Coquitlam, BC V3K 3P7</p>
-            <p><strong>Email:</strong> <a href="mailto:schoolhousechildcare@outlook.com" style="color: var(--primary-blue); text-decoration: none; font-weight: bold;">schoolhousechildcare@outlook.com</a></p>
-            <p style="margin-top:20px; font-size: 0.9rem; color: #666;">Licensed by Fraser Health. Owned by Kubo Holdings Inc.</p>
+    <div class="contact-flex">
+        <div class="contact-info">
+            <h2>Let's Connect</h2>
+            <p><strong>Address:</strong> 1506 Austin Ave, Coquitlam, BC</p>
+            <p><strong>Email:</strong> <a href="mailto:schoolhousechildcare@outlook.com">schoolhousechildcare@outlook.com</a></p>
+            
+            <!-- MOBILE BUTTON: Only shows on phones to guarantee the form works -->
+            <div class="mobile-only-fix" style="margin-top: 30px;">
+                <p style="font-weight: bold; color: var(--warm-orange);">Mobile User?</p>
+                <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAN__7Ez7NlURDkwWllXV0IwU05QN1ZFT1Q4N1RQTjhMTy4u" target="_blank" style="text-decoration: none;">
+                    <button style="background: var(--primary-blue); color: white; border: none; padding: 18px 25px; border-radius: 12px; font-weight: 700; width: 100%; cursor: pointer; font-size: 1.1rem; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
+                        📋 Open Inquiry Form
+                    </button>
+                </a>
+                <p style="font-size: 0.8rem; color: #888; margin-top: 10px;">(Click above if the form below doesn't load on your device)</p>
+            </div>
         </div>
+        
+        <div class="form-container" style="min-height: 700px; border: 1px solid #eee;">
+            <iframe width="100%" height="700px" src="https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAN__7Ez7NlURDkwWllXV0IwU05QN1ZFT1Q4N1RQTjhMTy4u&embed=true" frameborder="0" style="border: none;"></iframe>
+        </div>
+    </div>
+</section>
+
+<style>
+    /* This makes sure the button is very obvious on phones but subtle on computers */
+    @media (min-width: 769px) {
+        .mobile-only-fix { display: none; }
+    }
+</style>
         
         <!-- Right Side: The Fixed MS Form Container -->
         <div class="form-container" style="
