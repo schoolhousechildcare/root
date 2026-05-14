@@ -207,25 +207,44 @@
             <p><strong>Address:</strong> 1506 Austin Ave, Coquitlam, BC</p>
             <p><strong>Email:</strong> <a href="mailto:schoolhousechildcare@outlook.com">schoolhousechildcare@outlook.com</a></p>
             
-            <!-- MOBILE BUTTON: Only shows on phones to guarantee the form works -->
-            <div class="mobile-only-fix" style="margin-top: 30px;">
-                <p style="font-weight: bold; color: var(--warm-orange);">Mobile User?</p>
+            <div class="mobile-only-fix" style="margin-top: 25px;">
                 <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAN__7Ez7NlURDkwWllXV0IwU05QN1ZFT1Q4N1RQTjhMTy4u" target="_blank" style="text-decoration: none;">
-                    <button style="background: var(--primary-blue); color: white; border: none; padding: 18px 25px; border-radius: 12px; font-weight: 700; width: 100%; cursor: pointer; font-size: 1.1rem; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
+                    <button style="background: var(--primary-blue); color: white; border: none; padding: 15px; border-radius: 10px; font-weight: 700; width: 100%; cursor: pointer;">
                         📋 Open Inquiry Form
                     </button>
                 </a>
-                <p style="font-size: 0.8rem; color: #888; margin-top: 10px;">(Click above if the form below doesn't load on your device)</p>
             </div>
         </div>
         
-        <div class="form-container" style="min-height: 700px; border: 1px solid #eee;">
-            <iframe width="100%" height="700px" src="https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAN__7Ez7NlURDkwWllXV0IwU05QN1ZFT1Q4N1RQTjhMTy4u&embed=true" frameborder="0" style="border: none;"></iframe>
+        <!-- THE TRICK: We set a specific height and 'overflow: hidden' to mask the MS footer -->
+        <div class="form-container" style="
+            height: 620px; 
+            overflow: hidden; 
+            border: 1px solid #eee; 
+            background: #fff;
+            position: relative;
+        ">
+            <iframe 
+                width="100%" 
+                height="800px" 
+                src="https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAN__7Ez7NlURDkwWllXV0IwU05QN1ZFT1Q4N1RQTjhMTy4u&embed=true" 
+                frameborder="0" 
+                style="border: none; margin-top: -10px; position: absolute; top: 0;"
+                allowfullscreen>
+            </iframe>
         </div>
     </div>
 </section>
 
 <style>
+    /* Desktop vs Mobile adjustments for the 'mask' */
+    @media (max-width: 768px) {
+        .form-container { height: 600px; } /* Tightens the box on mobile to hide the footer */
+    }
+    @media (min-width: 769px) {
+        .mobile-only-fix { display: none; }
+    }
+</style><style>
     /* This makes sure the button is very obvious on phones but subtle on computers */
     @media (min-width: 769px) {
         .mobile-only-fix { display: none; }
