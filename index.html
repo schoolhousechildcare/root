@@ -209,33 +209,57 @@
             <p><strong>Address:</strong> 1506 Austin Ave, Coquitlam, BC</p>
             <p><strong>Email:</strong> <a href="mailto:schoolhousechildcare@outlook.com">schoolhousechildcare@outlook.com</a></p>
             
+            <!-- Guaranteed Mobile Button -->
             <div class="mobile-only-fix" style="margin-top: 25px;">
                 <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAN__7Ez7NlURDkwWllXV0IwU05QN1ZFT1Q4N1RQTjhMTy4u" target="_blank" style="text-decoration: none;">
-                    <button style="background: var(--primary-blue); color: white; border: none; padding: 15px; border-radius: 10px; font-weight: 700; width: 100%; cursor: pointer;">
+                    <button style="background: var(--primary-blue); color: white; border: none; padding: 15px; border-radius: 10px; font-weight: 700; width: 100%; cursor: pointer; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
                         📋 Open Inquiry Form
                     </button>
                 </a>
+                <p style="font-size: 0.8rem; color: #888; margin-top: 8px; text-align: center;">(Use button if form below is hidden)</p>
             </div>
         </div>
         
-        <div class="form-container">
+        <!-- FORCED HEIGHT CONTAINER -->
+        <div class="form-container" style="
+            flex: 1.5; 
+            min-width: 300px; 
+            background: white; 
+            border-radius: 20px; 
+            overflow: hidden; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1); 
+            height: 750px; /* Increased height for better visibility */
+            position: relative;
+            border: 1px solid #eee;
+        ">
             <iframe 
                 width="100%" 
-                height="800px" 
+                height="850px" 
                 src="https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAN__7Ez7NlURDkwWllXV0IwU05QN1ZFT1Q4N1RQTjhMTy4u&embed=true" 
                 frameborder="0" 
-                style="border: none; margin-top: -10px; position: absolute; top: 0;"
+                style="border: none; position: absolute; top: 0; left: 0; width: 100%;"
                 allowfullscreen>
+                Loading…
             </iframe>
         </div>
     </div>
 </section>
+
+<style>
+    /* Desktop vs Mobile adjustments */
+    @media (max-width: 768px) {
+        .form-container { 
+            height: 800px !important; /* Forces the height on Android/iOS */
+            display: block !important;
+        }
+    }
+    @media (min-width: 769px) {
+        .mobile-only-fix { display: none; }
+    }
+</style>
 
 <footer>
     <img src="https://raw.githubusercontent.com/schoolhousechildcare/root/102d0757a520bf57d63d641a53a8d739fc3f777e/Logo%20School%20House.png" alt="School House Logo" style="height:50px; margin-bottom:10px; mix-blend-mode: multiply;">
     <p><strong>School House Childcare</strong> | Coquitlam, BC</p>
     <p style="opacity: 0.5; font-size: 0.8rem;">&copy; 2026 All Rights Reserved.</p>
 </footer>
-
-</body>
-</html>
