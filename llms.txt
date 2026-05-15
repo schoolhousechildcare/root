@@ -1,0 +1,9 @@
+# School House Childcare
+Licensed in-home multi-age childcare in Coquitlam, BC.
+
+## Core Details
+- Capacity: 8 children
+- Location: Central Coquitlam
+- Programs: Play-based learning, 3-5 years and infant/toddler
+- Hours: 7:30 AM - 5:30 PM
+- Website: https://schoolhousechildcare.ca
