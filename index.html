@@ -93,10 +93,11 @@
             z-index: 1000;
         }
 
-        .header-left {
+        .header-left-link {
             display: flex;
             align-items: center;
             gap: 15px;
+            text-decoration: none;
         }
 
         .header-logo { height: 60px; display: flex; align-items: center; }
@@ -199,30 +200,76 @@
             box-shadow: 0 6px 15px rgba(249, 148, 23, 0.4);
         }
 
+        /* Footer Layout Styles */
+        .site-footer {
+            background: #2D3436;
+            color: white;
+            padding: 40px 10%;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .footer-left {
+            flex: 1;
+            min-width: 250px;
+            text-align: left;
+        }
+
+        .footer-left p { margin: 5px 0; }
+        .footer-left .copyright { opacity: 0.5; font-size: 0.8rem; margin-top: 15px; }
+
+        .footer-right { text-align: right; min-width: 150px; }
+        .footer-right h3 {
+            font-family: 'Quicksand', sans-serif;
+            color: var(--warm-orange);
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+            letter-spacing: 0.5px;
+        }
+
+        .footer-nav { display: flex; flex-direction: column; gap: 10px; }
+        .footer-nav a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: color 0.2s ease;
+        }
+        .footer-nav a:hover { color: var(--soft-green); }
+
         @media (max-width: 768px) {
             .hero h1 { font-size: 2.2rem; }
             .brand-text, nav { display: none; }
             .methodologies-card { padding: 40px 20px; }
             .methodologies-card p { font-size: 1.1rem; }
             .cta-button-prominent { padding: 18px 30px; font-size: 1rem; width: 85%; }
+            .site-footer { flex-direction: column; text-align: center; align-items: center; padding: 40px 5%; }
+            .footer-left, .footer-right { text-align: center; width: 100%; }
+            .footer-right h3 { margin-top: 10px; }
         }
     </style>
 </head>
 <body>
 
 <header>
-    <div class="header-left">
-        <a href="#" class="header-logo">
+    <!-- Combined logo and brand text into a single home link wrapper -->
+    <a href="index.html" class="header-left-link">
+        <div class="header-logo">
             <img src="https://raw.githubusercontent.com/schoolhousechildcare/root/102d0757a520bf57d63d641a53a8d739fc3f777e/Logo%20School%20House.png" alt="School House Childcare Logo">
-        </a>
+        </div>
         <div class="brand-text">School House<br><span style="font-size: 0.8rem; color: var(--soft-green);">Childcare</span></div>
-    </div>
+    </a>
     <nav>
         <a href="#about">Our Space</a>
         <a href="#guidance">Guidance</a>
         <a href="#safety">Safety</a>
         <a href="#schedule">Schedule</a>
         <a href="#methodologies">Methodologies</a>
+        <a href="contact.html">Contact</a>
     </nav>
 </header>
 
@@ -312,88 +359,10 @@
             <a href="#safety">Safety</a>
             <a href="#schedule">Schedule</a>
             <a href="methodologies.html">Methodologies</a>
+            <a href="contact.html">Contact Us</a>
         </nav>
     </div>
 </footer>
 
-<style>
-    /* Footer Layout */
-    .site-footer {
-        background: #2D3436;
-        color: white;
-        padding: 40px 10%;
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-        flex-wrap: wrap;
-        gap: 30px;
-    }
-
-    .footer-left {
-        flex: 1;
-        min-width: 250px;
-        text-align: left;
-    }
-
-    .footer-left p {
-        margin: 5px 0;
-    }
-
-    .footer-left .copyright {
-        opacity: 0.5;
-        font-size: 0.8rem;
-        margin-top: 15px;
-    }
-
-    /* Footer Menu on the Right */
-    .footer-right {
-        text-align: right;
-        min-width: 150px;
-    }
-
-    .footer-right h3 {
-        font-family: 'Quicksand', sans-serif;
-        color: var(--warm-orange);
-        margin-top: 0;
-        margin-bottom: 15px;
-        font-size: 1.1rem;
-        letter-spacing: 0.5px;
-    }
-
-    .footer-nav {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .footer-nav a {
-        color: rgba(255, 255, 255, 0.8);
-        text-decoration: none;
-        font-weight: 600;
-        font-size: 0.9rem;
-        transition: color 0.2s ease;
-    }
-
-    .footer-nav a:hover {
-        color: var(--soft-green);
-    }
-
-    /* Mobile Responsiveness */
-    @media (max-width: 768px) {
-        .site-footer {
-            flex-direction: column;
-            text-align: center;
-            align-items: center;
-            padding: 40px 5%;
-        }
-        .footer-left, .footer-right {
-            text-align: center;
-            width: 100%;
-        }
-        .footer-right h3 {
-            margin-top: 10px;
-        }
-    }
-</style>
 </body> 
 </html>
