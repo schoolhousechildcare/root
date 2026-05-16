@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="description" content="Get in touch with School House Childcare in Central Coquitlam. Secure your child's spot or inquire about our play-based multi-age daycare enrollment.">
+    <link rel="canonical" href="https://schoolhousechildcare.ca/contact.html">
+
+    <meta property="og:title" content="Contact Us | School House Childcare Coquitlam">
+    <meta property="og:description" content="Inquire about enrollment and connect with our licensed 8-child capacity home childcare program.">
+    <meta property="og:image" content="https://schoolhousechildcare.ca/og-image.jpg">
+    <meta property="og:url" content="https://schoolhousechildcare.ca/contact.html">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Childcare",
+      "name": "School House Childcare",
+      "image": "https://schoolhousechildcare.ca/logo.jpg",
+      "url": "https://schoolhousechildcare.ca",
+      "telephone": "+1 672-867-4003",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "1506 Austin Avenue",
+        "addressLocality": "Coquitlam",
+        "addressRegion": "BC",
+        "postalCode": "V3k3P7",
+        "addressCountry": "CA"
+      }
+    }
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | School House Childcare</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght=400;600;700&family=Nunito:wght=400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-blue: #2A5C9A;
+            --soft-green: #5BB318;
+            --warm-orange: #F99417;
+            --bg-light: #FDFDFD;
+            --text-main: #2D3436;
+        }
+
+        /* Image transparency & quality fix */
+        .header-logo img {
+            mix-blend-mode: multiply;
+            filter: contrast(120%);
+        }
+
+        body {
+            font-family: 'Nunito', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: var(--text-main);
+            background-color: var(--bg-light);
+            scroll-behavior: smooth;
+        }
+
+        header {
+            background: #fff;
+            padding: 10px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .header-logo { height: 60px; display: flex; align-items: center; }
+        .header-logo img { height: 100%; width: auto; }
+
+        .brand-text {
+            font-family: 'Quicksand', sans-serif;
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: var(--primary-blue);
+            line-height: 1;
+        }
+
+        nav a {
+            margin-left: 20px;
+            text-decoration: none;
+            color: var(--text-main);
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        nav a:hover { color: var(--warm-orange); }
+
+        /* Contact Section Styling */
+        .contact-section {
+            padding: 80px 10%;
+            background: linear-gradient(135deg, #f0f7ff 0%, #fff9f0 100%);
+            min-height: calc(100vh - 360px);
+        }
+
+        .contact-container {
+            display: flex;
+            gap: 60px;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .contact-info-panel {
+            flex: 1;
+            min-width: 320px;
+        }
+
+        .contact-info-panel h1 {
+            font-family: 'Quicksand', sans-serif;
+            font-size: 2.8rem;
+            color: var(--primary-blue);
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+
+        .contact-info-panel p class="intro-text" {
+            font-size: 1.15rem;
+            line-height: 1.6;
+            color: #555;
+            margin-bottom: 40px;
+        }
+
+        .info-card-list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .info-item {
+            background: white;
+            padding: 20px 25px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(42, 92, 154, 0.04);
+            border-left: 5px solid var(--soft-green);
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .info-item.orange-border {
+            border-left-color: var(--warm-orange);
+        }
+
+        .info-item.blue-border {
+            border-left-color: var(--primary-blue);
+        }
+
+        .info-icon {
+            font-size: 1.6rem;
+            background: #f8fafc;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+        }
+
+        .info-details h3 {
+            margin: 0 0 4px 0;
+            font-family: 'Quicksand', sans-serif;
+            font-size: 1.05rem;
+            color: #718096;
+        }
+
+        .info-details p, .info-details a {
+            margin: 0;
+            font-weight: 700;
+            font-size: 1.15rem;
+            color: var(--text-main);
+            text-decoration: none;
+        }
+
+        .info-details a:hover {
+            color: var(--primary-blue);
+        }
+
+        /* Form Container Fixes */
+        .form-desktop-panel { 
+            flex: 1.3; 
+            min-width: 350px; 
+            background: white; 
+            border-radius: 25px; 
+            overflow: hidden; 
+            box-shadow: 0 15px 35px rgba(0,0,0,0.06);
+            border: 1px solid rgba(0,0,0,0.03);
+            height: 700px;
+        }
+
+        .form-desktop-panel iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* Mobile Layout Actions */
+        .mobile-action-card {
+            display: none;
+            background: white; 
+            padding: 30px 25px; 
+            border-radius: 25px; 
+            margin-top: 30px;
+            text-align: center;
+            border: 2px dashed var(--primary-blue);
+            box-shadow: 0 10px 25px rgba(42, 92, 154, 0.05);
+        }
+
+        .mobile-action-card p {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-top: 0;
+            margin-bottom: 20px;
+            color: #4a5568;
+        }
+
+        .cta-button {
+            display: block;
+            background: var(--primary-blue);
+            color: white;
+            border: none;
+            padding: 18px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            cursor: pointer;
+            width: 100%;
+            box-shadow: 0 6px 20px rgba(42, 92, 154, 0.3);
+            transition: transform 0.2s, background 0.2s;
+            text-decoration: none;
+        }
+
+        .cta-button:hover {
+            background: #1e4577;
+        }
+
+        .cta-button:active { 
+            transform: scale(0.98); 
+        }
+
+        /* Footer Layout Styles */
+        .site-footer {
+            background: #2D3436;
+            color: white;
+            padding: 40px 10%;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .footer-left {
+            flex: 1;
+            min-width: 250px;
+            text-align: left;
+        }
+
+        .footer-left p { margin: 5px 0; }
+        .footer-left .copyright { opacity: 0.5; font-size: 0.8rem; margin-top: 15px; }
+
+        .footer-right { text-align: right; min-width: 150px; }
+        .footer-right h3 {
+            font-family: 'Quicksand', sans-serif;
+            color: var(--warm-orange);
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+
+        .footer-nav { display: flex; flex-direction: column; gap: 10px; }
+        .footer-nav a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: color 0.2s ease;
+        }
+        .footer-nav a:hover { color: var(--soft-green); }
+
+        /* Responsive Breakpoints */
+        @media (max-width: 991px) {
+            .contact-container { flex-direction: column; gap: 40px; }
+            .contact-info-panel, .form-desktop-panel { width: 100%; flex: none; }
+        }
+
+        @media (max-width: 768px) {
+            .brand-text, nav { display: none; }
+            .contact-section { padding: 50px 5%; }
+            .contact-info-panel h1 { font-size: 2.2rem; }
+            .form-desktop-panel { display: none !important; } /* Hide the iframe completely on mobile */
+            .mobile-action-card { display: block !important; } /* Surface click button on mobile */
+            .site-footer { flex-direction: column; text-align: center; align-items: center; padding: 40px 5%; }
+            .footer-left, .footer-right { text-align: center; width: 100%; }
+            .footer-right h3 { margin-top: 10px; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="header-left">
+        <a href="index.html" class="header-logo">
+            <img src="https://raw.githubusercontent.com/schoolhousechildcare/root/102d0757a520bf57d63d641a53a8d739fc3f777e/Logo%20School%20House.png" alt="School House Childcare Logo">
+        </a>
+        <div class="brand-text">School House<br><span style="font-size: 0.8rem; color: var(--soft-green);">Childcare</span></div>
+    </div>
+    <nav>
+        <a href="index.html#about">Our Space</a>
+        <a href="index.html#guidance">Guidance</a>
+        <a href="index.html#safety">Safety</a>
+        <a href="index.html#schedule">Schedule</a>
+        <a href="index.html#methodologies">Methodologies</a>
+        <a href="contact.html" style="color: var(--warm-orange);">Contact</a>
+    </nav>
+</header>
+
+<main class="contact-section">
+    <div class="contact-container">
+        
+        <!-- LEFT COLUMN: INFO & DETAILS -->
+        <div class="contact-info-panel">
+            <h1>Let's Connect</h1>
+            <p class="intro-text">Have questions about openings, registrations, or schedule details? We're here to guide you through the process. Reach out directly or complete our digital inquiry form.</p>
+            
+            <div class="info-card-list">
+                <div class="info-item">
+                    <div class="info-icon">📍</div>
+                    <div class="info-details">
+                        <h3>Our Location</h3>
+                        <p>1506 Austin Ave, Coquitlam, BC</p>
+                    </div>
+                </div>
+                
+                <div class="info-item orange-border">
+                    <div class="info-icon">✉️</div>
+                    <div class="info-details">
+                        <h3>Email Enquiries</h3>
+                        <p><a href="mailto:schoolhousechildcare@outlook.com">schoolhousechildcare@outlook.com</a></p>
+                    </div>
+                </div>
+                
+                <div class="info-item blue-border">
+                    <div class="info-icon">📞</div>
+                    <div class="info-details">
+                        <h3>Phone Number</h3>
+                        <p>+1 672 867 4003</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- MOBILE CTAs -->
+            <div class="mobile-action-card">
+                <p><strong>Ready to start enrollment?</strong> Tap below to open our secure registration inquiry form directly.</p>
+                <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAN__7Ez7NlURDkwWllXV0IwU05QN1ZFT1Q4N1RQTjhMTy4u" target="_blank" class="cta-button">
+                    📋 Open Inquiry Form
+                </a>
+            </div>
+        </div>
+        
+        <!-- RIGHT COLUMN: EMBEDDED FORM CONTAINER -->
+        <div class="form-desktop-panel">
+            <iframe src="https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAN__7Ez7NlURDkwWllXV0IwU05QN1ZFT1Q4N1RQTjhMTy4u&embed=true" allowfullscreen></iframe>
+        </div>
+
+    </div>
+</main>
+
+<footer class="site-footer">
+    <div class="footer-left">
+        <img src="https://raw.githubusercontent.com/schoolhousechildcare/root/102d0757a520bf57d63d641a53a8d739fc3f777e/Logo%20School%20House.png" 
+             alt="School House Logo" 
+             style="height: 50px; margin-bottom: 10px; background: white; padding: 6px; border-radius: 12px;">
+        <p><strong>School House Childcare</strong> | Coquitlam, BC</p>
+        <p class="copyright">&copy; 2026 All Rights Reserved.</p>
+    </div>
+
+    <div class="footer-right">
+        <h3>Quick Links</h3>
+        <nav class="footer-nav">
+            <a href="index.html#about">Our Space</a>
+            <a href="index.html#guidance">Guidance</a>
+            <a href="index.html#safety">Safety</a>
+            <a href="index.html#schedule">Schedule</a>
+            <a href="index.html#methodologies">Methodologies</a>
+            <a href="contact.html">Contact Us</a>
+        </nav>
+    </div>
+</footer>
+
+</body> 
+</html>
