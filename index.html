@@ -111,6 +111,401 @@
             line-height: 1;
         }
 
+        nav {
+            display: flex;
+            align-items: center;
+        }
+
+        nav a {
+            margin-left: 20px;
+            text-decoration: none;
+            color: var(--text-main);
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        nav a:hover { color: var(--warm-orange); }
+
+        .hero {
+            background: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)), 
+                        url('https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+            padding: 100px 10%;
+        }
+
+        .hero-img { max-width: 180px; margin-bottom: 20px; }
+        .hero h1 { font-family: 'Quicksand'; font-size: 3.2rem; color: var(--primary-blue); margin: 0; line-height: 1.2; }
+        .hero p { font-size: 1.2rem; margin-top: 15px; color: #555; }
+
+        section { padding: 80px 10%; border-bottom: 1px solid #eee; }
+        h2 { font-family: 'Quicksand'; font-size: 2.2rem; text-align: center; color: var(--primary-blue); margin-bottom: 40px; }
+         
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .card { background: #fff; padding: 35px; border-radius: 25px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border-bottom: 4px solid var(--soft-green); }
+        .card h3 { color: var(--primary-blue); font-family: 'Quicksand'; margin-top: 0; }
+
+        .feature-list { list-style: none; padding: 0; }
+        .feature-list li { margin-bottom: 15px; padding-left: 30px; position: relative; }
+        .feature-list li::before { content: '✓'; position: absolute; left: 0; color: var(--soft-green); font-weight: bold; }
+
+        .schedule-box { background: var(--primary-blue); color: white; padding: 40px; border-radius: 30px; max-width: 800px; margin: 0 auto; }
+        .schedule-item { display: flex; justify-content: space-between; border-bottom: 1px solid rgba(255,255,255,0.2); padding: 12px 0; }
+
+        .safety-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+        .safety-card { background: #f0f7ff; padding: 25px; border-radius: 20px; border-left: 5px solid var(--warm-orange); }
+
+        /* Prominent Methodologies Section Styling */
+        .methodologies-card {
+            background: white;
+            max-width: 750px;
+            margin: 0 auto;
+            padding: 50px 40px;
+            border-radius: 30px;
+            text-align: center;
+            box-shadow: 0 20px 40px rgba(42, 92, 154, 0.08);
+            border-top: 6px solid var(--warm-orange);
+        }
+         
+        .methodologies-card h2 {
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+
+        .methodologies-card p {
+            font-size: 1.25rem;
+            line-height: 1.6;
+            color: #4a5568;
+            margin-bottom: 35px;
+        }
+
+        .cta-button-prominent {
+            display: inline-block;
+            background: var(--warm-orange);
+            color: white;
+            border: none;
+            padding: 20px 45px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1.15rem;
+            text-decoration: none;
+            box-shadow: 0 8px 25px rgba(249, 148, 23, 0.4);
+            transition: all 0.3s ease;
+        }
+
+        .cta-button-prominent:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(249, 148, 23, 0.5);
+            background: #e08310;
+        }
+
+        .cta-button-prominent:active {
+            transform: translateY(-1px);
+            box-shadow: 0 6px 15px rgba(249, 148, 23, 0.4);
+        }
+
+        /* Footer Layout Styles */
+        .site-footer {
+            background: #2D3436;
+            color: white;
+            padding: 40px 10%;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .footer-left {
+            flex: 1;
+            min-width: 250px;
+            text-align: left;
+        }
+
+        .footer-left p { margin: 5px 0; }
+        .footer-left .copyright { opacity: 0.5; font-size: 0.8rem; margin-top: 15px; }
+
+        .footer-right { text-align: right; min-width: 150px; }
+        .footer-right h3 {
+            font-family: 'Quicksand', sans-serif;
+            color: var(--warm-orange);
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+            letter-spacing: 0.5px;
+        }
+
+        .footer-nav { display: flex; flex-direction: column; gap: 10px; }
+        .footer-nav a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: color 0.2s ease;
+        }
+        .footer-nav a:hover { color: var(--soft-green); }
+
+        /* Responsive Mobile Breakpoint Fixes */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 12px;
+                padding: 15px 5%;
+            }
+
+            /* Brought back navigation row styling for mobile screens */
+            nav { 
+                display: flex; 
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 12px;
+            }
+            
+            nav a {
+                margin-left: 0; 
+                padding: 4px 6px;
+                font-size: 0.85rem;
+            }
+
+            .hero h1 { font-size: 2.2rem; }
+            .brand-text { display: none; } /* Hides the brand typography on small devices to prioritize layout space */
+            
+            .methodologies-card { padding: 40px 20px; }
+            .methodologies-card p { font-size: 1.1rem; }
+            .cta-button-prominent { padding: 18px 30px; font-size: 1rem; width: 85%; }
+            
+            .site-footer { flex-direction: column; text-align: center; align-items: center; padding: 40px 5%; }
+            .footer-left, .footer-right { text-align: center; width: 100%; }
+            .footer-right h3 { margin-top: 10px; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <!-- Combined logo and brand text into a single home link wrapper -->
+    <a href="index.html" class="header-left-link">
+        <div class="header-logo">
+            <img src="https://raw.githubusercontent.com/schoolhousechildcare/root/102d0757a520bf57d63d641a53a8d739fc3f777e/Logo%20School%20House.png" alt="School House Childcare Logo">
+        </div>
+        <div class="brand-text">School House<br><span style="font-size: 0.8rem; color: var(--soft-green);">Childcare</span></div>
+    </a>
+    <nav>
+        <a href="#about">Our Space</a>
+        <a href="#guidance">Guidance</a>
+        <a href="#safety">Safety</a>
+        <a href="#schedule">Schedule</a>
+        <a href="#methodologies">Methodologies</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <img src="https://raw.githubusercontent.com/schoolhousechildcare/root/102d0757a520bf57d63d641a53a8d739fc3f777e/Logo%20School%20House.png" alt="School House Logo" class="hero-img">
+    <h1>Nurturing Curiosity,<br>One Playful Day at a Time.</h1>
+    <p>Licensed Childcare at Austin Ave, Coquitlam.</p>
+    <a href="#methodologies" style="text-decoration:none;"><button style="background:var(--warm-orange); color:white; border:none; padding:18px 35px; border-radius:35px; font-weight:700; cursor:pointer; font-size: 1.1rem; margin-top: 20px;">Explore Our Approach</button></a>
+</section>
+
+<section id="about">
+    <h2>Our Learning Environment</h2>
+    <div class="grid">
+        <div class="card">
+            <h3>Indoor Play Studio</h3>
+            <p>Our dedicated space is designed for messy play, storytelling, and early cognitive discovery.</p>
+        </div>
+        <div class="card">
+            <h3>Secure Outdoor Space</h3>
+            <p>A fully fenced backyard area allows for daily fresh air and nature exploration.</p>
+        </div>
+    </div>
+</section>
+
+<section id="guidance" style="background: #f9fbfd;">
+    <h2>Guidance & Growth</h2>
+    <div class="card" style="max-width: 800px; margin: 0 auto;">
+        <p>Our small-group setting (max 8 children) allows for personalized emotional support and co-regulation.</p>
+        <ul class="feature-list" style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+            <li>Positive Redirection</li>
+            <li>Emotional Co-Regulation</li>
+            <li>Problem-Solving Skills</li>
+            <li>Safe & Clear Boundaries</li>
+        </ul>
+        <p style="font-size: 0.85rem; font-style: italic; color: #666; margin-top: 20px; border-top: 1px solid #eee; padding-top: 15px;">
+            *Strictly adhering to BC Child Care Licensing Regulations.
+        </p>
+    </div>
+</section>
+
+<section id="safety">
+    <h2>A Safe Space to Grow</h2>
+    <div class="safety-grid">
+        <div class="safety-card"><h3>Scent-Free Facility</h3><p>Using fragrance-free, eco-friendly cleaners.</p></div>
+        <div class="safety-card"><h3>Allergy Aware</h3><p>100% nut-free environment.</p></div>
+        <div class="safety-card"><h3>Safe Drop-off</h3><p>Designated area at 1506 Austin Ave.</p></div>
+        <div class="safety-card"><h3>Daily Wellness</h3><p>Consistent health screenings.</p></div>
+    </div>
+</section>
+
+<section id="schedule" style="background: #f0f7ff;">
+    <h2>The Daily Rhythm</h2>
+    <div class="schedule-box">
+        <div class="schedule-item"><span>8:00 AM</span> <span>Arrival & Quiet Discovery</span></div>
+        <div class="schedule-item"><span>9:30 AM</span> <span>Snack Time</span></div>
+        <div class="schedule-item"><span>10:30 AM</span> <span>Outdoor Exploration & Play</span></div>
+        <div class="schedule-item"><span>11:30 PM</span> <span>Nutritious Lunch Time</span></div>
+        <div class="schedule-item"><span>1:00 PM</span> <span>Nap & Rest Period</span></div>
+        <div class="schedule-item"><span>2:30 PM</span> <span>Snack Time</span></div>
+        <div class="schedule-item"><span>5:00 PM</span> <span>Home Time</span></div>
+    </div>
+</section>
+
+<!-- PROMINENT METHODOLOGIES CTA SECTION -->
+<section id="methodologies" style="background: linear-gradient(135deg, #fff9f0 0%, #f0f7ff 100%); padding: 100px 10%;">
+    <div class="methodologies-card">
+        <h2>Our Educational Approach</h2>
+        <p>Want to learn more about our dedicated learning and teaching methodologies designed to nurture your child's natural curiosity?</p>
+        <a href="methodologies.html" class="cta-button-prominent">Explore Our Methodologies →</a>
+    </div>
+</section>
+
+<footer class="site-footer">
+    <div class="footer-left">
+        <img src="https://raw.githubusercontent.com/schoolhousechildcare/root/102d0757a520bf57d63d641a53a8d739fc3f777e/Logo%20School%20House.png" 
+             alt="School House Logo" 
+             style="height: 50px; margin-bottom: 10px; mix-blend-mode: normal; filter: none; background: white; padding: 6px; border-radius: 12px;">
+        <p><strong>School House Childcare</strong> | Coquitlam, BC</p>
+        <p class="copyright">&copy; 2026 All Rights Reserved.</p>
+    </div>
+
+    <div class="footer-right">
+        <h3>Quick Links</h3>
+        <nav class="footer-nav">
+            <a href="#about">Our Space</a>
+            <a href="#guidance">Guidance</a>
+            <a href="#safety">Safety</a>
+            <a href="#schedule">Schedule</a>
+            <a href="methodologies.html">Methodologies</a>
+            <a href="contact.html">Contact Us</a>
+        </nav>
+    </div>
+</footer>
+
+</body> 
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="description" content="School House Childcare offers licensed, 8-child capacity multi-age daycare in Central Coquitlam. Secure your spot in our play-based learning program today.">
+    <link rel="canonical" href="https://schoolhousechildcare.ca/">
+
+    <meta property="og:title" content="School House Childcare | Play Based Learning and Emergent Curriculum">
+    <meta property="og:description" content="Now accepting registrations for our 8-child licensed home-based childcare in Coquitlam.">
+    <meta property="og:image" content="https://schoolhousechildcare.ca/og-image.jpg">
+    <meta property="og:url" content="https://schoolhousechildcare.ca">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Childcare",
+      "name": "School House Childcare",
+      "image": "https://schoolhousechildcare.ca/logo.jpg",
+      "url": "https://schoolhousechildcare.ca",
+      "telephone": "+1 672-867-4002",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "1506 Austin Avenue",
+        "addressLocality": "Coquitlam",
+        "addressRegion": "BC",
+        "postalCode": "V3k3P7",
+        "addressCountry": "CA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 49.2838,
+        "longitude": -122.7932
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday"
+        ],
+        "opens": "07:30",
+        "closes": "17:30"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+1-604-XXX-XXXX",
+        "contactType": "Enquiries"
+      },
+      "description": "Licensed in-home multi-age childcare facility in Central Coquitlam with an 8-child capacity, focusing on Play-based learning and Emergent Curriculum educational philosophies.",
+      "parentOrganization": {
+        "@type": "Organization",
+        "name": "Kubo Holdings Inc."
+      }
+    }
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School House Childcare | Coquitlam</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght=400;600;700&family=Nunito:wght=400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-blue: #2A5C9A;
+            --soft-green: #5BB318;
+            --warm-orange: #F99417;
+            --bg-light: #FDFDFD;
+            --text-main: #2D3436;
+        }
+
+        /* Image transparency & quality fix */
+        .header-logo img, .hero-img {
+            mix-blend-mode: multiply;
+            filter: contrast(120%);
+        }
+
+        body {
+            font-family: 'Nunito', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: var(--text-main);
+            background-color: var(--bg-light);
+            scroll-behavior: smooth;
+        }
+
+        header {
+            background: #fff;
+            padding: 10px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-left-link {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            text-decoration: none;
+        }
+
+        .header-logo { height: 60px; display: flex; align-items: center; }
+        .header-logo img { height: 100%; width: auto; }
+
+        .brand-text {
+            font-family: 'Quicksand', sans-serif;
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: var(--primary-blue);
+            line-height: 1;
+        }
+
         nav a {
             margin-left: 20px;
             text-decoration: none;
