@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="description" content="Explore our Play-Based and Emergent learning methodologies at School House Childcare in Central Coquitlam.">
+    <link rel="canonical" href="https://schoolhousechildcare.ca/methodologies.html">
+
+    <meta property="og:title" content="Our Methodologies | School House Childcare">
+    <meta property="og:description" content="Discover how we guide early learning through play-based and emergent curriculums.">
+    <meta property="og:image" content="https://schoolhousechildcare.ca/og-image.jpg">
+    <meta property="og:url" content="https://schoolhousechildcare.ca/methodologies.html">
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Methodologies | School House Childcare</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-blue: #2A5C9A;
+            --soft-green: #5BB318;
+            --warm-orange: #F99417;
+            --bg-light: #FDFDFD;
+            --text-main: #2D3436;
+        }
+
+        /* Image transparency & quality fix from your main site */
+        .header-logo img, .hero-img {
+            mix-blend-mode: multiply;
+            filter: contrast(120%);
+        }
+
+        body {
+            font-family: 'Nunito', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: var(--text-main);
+            background-color: var(--bg-light);
+            scroll-behavior: smooth;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* --- Header Styles --- */
+        header {
+            background: #fff;
+            padding: 10px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .header-logo { height: 60px; display: flex; align-items: center; text-decoration: none; }
+        .header-logo img { height: 100%; width: auto; }
+
+        .brand-text {
+            font-family: 'Quicksand', sans-serif;
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: var(--primary-blue);
+            line-height: 1;
+        }
+
+        nav a {
+            margin-left: 20px;
+            text-decoration: none;
+            color: var(--text-main);
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: color 0.2s ease;
+        }
+
+        nav a:hover, nav a.active { color: var(--warm-orange); }
+
+        /* --- Methodologies Hero Banner --- */
+        .hero {
+            background: linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)), 
+                        url('https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+            padding: 60px 10%;
+            border-bottom: 2px dashed #eee;
+        }
+
+        .hero h1 { font-family: 'Quicksand'; font-size: 3rem; color: var(--primary-blue); margin: 0; line-height: 1.2; }
+        .hero p { font-size: 1.15rem; margin-top: 15px; color: #555; max-width: 800px; margin-left: auto; margin-right: auto; }
+
+        /* --- Section Content Layouts --- */
+        section { padding: 60px 10%; border-bottom: 1px solid #eee; }
+        h2 { font-family: 'Quicksand'; font-size: 2.2rem; text-align: center; color: var(--primary-blue); margin-bottom: 40px; }
+
+        /* Modern Video and Blurb Container Layout */
+        .methodology-layout {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            background: #fff;
+            padding: 35px;
+            border-radius: 25px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+            border-bottom: 4px solid var(--soft-green);
+        }
+
+        @media (min-width: 900px) {
+            .methodology-layout {
+                flex-direction: row;
+                align-items: center;
+            }
+            .video-container {
+                flex: 1.2;
+            }
+            .text-container {
+                flex: 1;
+            }
+        }
+
+        /* 16:9 Responsive Video Wrapper */
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            background-color: #000;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+        
+        .video-wrapper video, .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        .blurb-text {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: #444;
+            text-align: justify;
+        }
+
+        /* --- Footer Styles --- */
+        .site-footer {
+            background: #2D3436;
+            color: white;
+            padding: 40px 10%;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-top: auto;
+        }
+
+        .footer-left {
+            flex: 1;
+            min-width: 250px;
+            text-align: left;
+        }
+
+        .footer-left p { margin: 5px 0; }
+        .footer-left .copyright { opacity: 0.5; font-size: 0.8rem; margin-top: 15px; }
+
+        .footer-right { text-align: right; min-width: 150px; }
+        .footer-right h3 {
+            font-family: 'Quicksand', sans-serif;
+            color: var(--warm-orange);
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+            letter-spacing: 0.5px;
+        }
+
+        .footer-nav { display: flex; flex-direction: column; gap: 10px; }
+        .footer-nav a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: color 0.2s ease;
+        }
+        .footer-nav a:hover { color: var(--soft-green); }
+
+        /* --- Responsive Layout Optimization --- */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.2rem; }
+            .brand-text { display: none; }
+            
+            /* Responsive simple mobile menu structure */
+            header { flex-direction: column; gap: 10px; padding: 15px 5%; }
+            nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
+            nav a { margin-left: 0; padding: 5px 10px; }
+
+            .site-footer {
+                flex-direction: column;
+                text-align: center;
+                align-items: center;
+                padding: 40px 5%;
+            }
+            .footer-left, .footer-right { text-align: center; width: 100%; }
+            .footer-right h3 { margin-top: 10px; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Header Navigation -->
+<header>
+    <div class="header-left">
+        <a href="index.html" class="header-logo">
+            <img src="https://raw.githubusercontent.com/schoolhousechildcare/root/102d0757a520bf57d63d641a53a8d739fc3f777e/Logo%20School%20House.png" alt="School House Childcare Logo">
+        </a>
+        <div class="brand-text">School House<br><span style="font-size: 0.8rem; color: var(--soft-green);">Childcare</span></div>
+    </div>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="index.html#about">Our Space</a>
+        <a href="index.html#guidance">Guidance</a>
+        <a href="methodologies.html" class="active">Methodologies</a>
+        <a href="index.html#safety">Safety</a>
+        <a href="index.html#schedule">Schedule</a>
+        <a href="index.html#contact">Contact</a>
+    </nav>
+</header>
+
+<!-- Hero Title Block -->
+<section class="hero">
+    <h1>Our Learning & Teaching Methodologies</h1>
+    <p>Discover how our carefully tailored frameworks nurture childhood growth, build confidence, and turn innate curiosity into lifelong capability.</p>
+</section>
+
+<!-- Section 1: Play-Based Learning -->
+<section id="play-based">
+    <h2>Play-Based Learning</h2>
+    <div class="methodology-layout">
+        <div class="video-container">
+            <div class="video-wrapper">
+                <!-- Replace with your actual video asset file path or embed link -->
+                <video controls poster="images/play-poster.jpg">
+                    <source src="videos/play-video.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+        <div class="text-container">
+            <p class="blurb-text">
+                Play is a child’s natural mechanism for experiencing and conceptualizing the world around them. Through our purposeful Play-Based Learning approach, children organically cultivate language proficiency, emotional resilience, social collaboration, and analytical problem-solving skills. By actively exploring tactile objects and engaging with their peers, early learners navigate new ideas in a low-pressure, supportive space where learning feels natural and delightful.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Section 2: Emergent Learning -->
+<section id="emergent" style="background: #f9fbfd;">
+    <h2>Emergent Curriculum</h2>
+    <div class="methodology-layout" style="border-bottom-color: var(--warm-orange);">
+        <div class="video-container">
+            <div class="video-wrapper">
+                <!-- Replace with your actual video asset file path or embed link -->
+                <video controls poster="images/emergent-poster.jpg">
+                    <source src="videos/emergent-video.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+        <div class="text-container">
+            <p class="blurb-text">
+                An Emergent Curriculum responds dynamically to children's immediate fascinations. Rather than enforcing a static, textbook curriculum, our licensed educators observe what captures classroom interest in real-time—be it changing weather patterns, insects, or creative architectural layouts. We build interactive lessons around these discoveries, ensuring education is highly personalized, community-centric, and intensely engaging for every single child.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Integrated Site Footer -->
+<footer class="site-footer">
+    <div class="footer-left">
+        <img src="https://raw.githubusercontent.com/schoolhousechildcare/root/102d0757a520bf57d63d641a53a8d739fc3f777e/Logo%20School%20House.png" 
+             alt="School House Logo" 
+             style="height: 50px; margin-bottom: 10px; mix-blend-mode: normal; filter: none; background: white; padding: 6px; border-radius: 12px;">
+        <p><strong>School House Childcare</strong> | Coquitlam, BC</p>
+        <p class="copyright">&copy; 2026 All Rights Reserved.</p>
+    </div>
+
+    <div class="footer-right">
+        <h3>Quick Links</h3>
+        <nav class="footer-nav">
+            <a href="index.html">Home</a>
+            <a href="index.html#about">Our Space</a>
+            <a href="index.html#guidance">Guidance</a>
+            <a href="methodologies.html">Methodologies</a>
+            <a href="index.html#safety">Safety</a>
+            <a href="index.html#schedule">Schedule</a>
+            <a href="index.html#contact">Contact</a>
+        </nav>
+    </div>
+</footer>
+
+</body>
+</html>
