@@ -343,15 +343,111 @@
     }
 </style>
 
-<footer>
-        <img src="https://raw.githubusercontent.com/schoolhousechildcare/root/102d0757a520bf57d63d641a53a8d739fc3f777e/Logo%20School%20House.png" alt="School House Logo" style="height:50px; margin-bottom:10px; mix-blend-mode: multiply;">
+<footer class="site-footer">
+    <div class="footer-left">
+        <img src="https://raw.githubusercontent.com/schoolhousechildcare/root/102d0757a520bf57d63d641a53a8d739fc3f777e/Logo%20School%20House.png" alt="School House Logo" class="footer-logo">
         <p><strong>School House Childcare</strong> | Coquitlam, BC</p>
-        <p style="opacity: 0.5; font-size: 0.8rem;">&copy; 2026 All Rights Reserved.</p>
-    </footer>
+        <p class="copyright">&copy; 2026 All Rights Reserved.</p>
+    </div>
 
-    <script type="text/javascript">
-    (function(e){var t="https://contact.goto.com/web-chat/widget.min.js";window["CC_WEB_CHAT_APP_KEY"]=e;var n=function e(){var n;var a=document.createElement("script");a.type="text/javascript";a.async=true;a.src=t;var r=document.getElementsByTagName("script")[0];(n=r.parentNode)===null||n===void 0?void 0:n.insertBefore(a,r)};if(document.readyState==="complete"){n()}else{window.addEventListener("load",n,false)}})("b5bc1320-9696-4439-a8fa-696e60299dc0");
-    </script>
+    <div class="footer-right">
+        <h3>Quick Links</h3>
+        <nav class="footer-nav">
+            <a href="#about">Our Space</a>
+            <a href="#guidance">Guidance</a>
+            <a href="#safety">Safety</a>
+            <a href="#schedule">Schedule</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </div>
+</footer>
 
-</body>
-</html>
+<style>
+    /* Footer Layout */
+    .site-footer {
+        background: #2D3436;
+        color: white;
+        padding: 40px 10%;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+
+    .footer-left {
+        flex: 1;
+        min-width: 250px;
+        text-align: left;
+    }
+
+    .footer-logo {
+        height: 50px;
+        margin-bottom: 10px;
+        mix-blend-mode: multiply;
+        background: white; /* Optional: adds a crisp background to the blended logo if needed */
+        padding: 5px;
+        border-radius: 8px;
+    }
+
+    .footer-left p {
+        margin: 5px 0;
+    }
+
+    .footer-left .copyright {
+        opacity: 0.5;
+        font-size: 0.8rem;
+        margin-top: 15px;
+    }
+
+    /* Footer Menu on the Right */
+    .footer-right {
+        text-align: right;
+        min-width: 150px;
+    }
+
+    .footer-right h3 {
+        font-family: 'Quicksand', sans-serif;
+        color: var(--warm-orange);
+        margin-top: 0;
+        margin-bottom: 15px;
+        font-size: 1.1rem;
+        letter-spacing: 0.5px;
+    }
+
+    .footer-nav {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .footer-nav a {
+        color: rgba(255, 255, 255, 0.8);
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 0.9rem;
+        transition: color 0.2s ease;
+    }
+
+    .footer-nav a:hover {
+        color: var(--soft-green);
+    }
+
+    /* Mobile Responsiveness */
+    @media (max-width: 768px) {
+        .site-footer {
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
+            padding: 40px 5%;
+        }
+        .footer-left, .footer-right {
+            text-align: center;
+            width: 100%;
+        }
+        .footer-right h3 {
+            margin-top: 10px;
+        }
+    }
+</style>
+</body> </html>
